@@ -2,6 +2,9 @@ node('master')
 {
 
 def mavenhome=tool name: "maven3.6.3"
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5')), pipelineTriggers([pollSCM('* * * * *')])])
+    
+    
 stage('CheckoutCode') {
     git branch: 'development', credentialsId: 'Github', url: 'https://github.com/naren-technologies/maven-web-application.git'
 }
