@@ -9,7 +9,6 @@ stage('CheckoutCode') {
     git branch: 'development', credentialsId: 'Github', url: 'https://github.com/naren-technologies/maven-web-application.git'
 }
 
-    /*
 stage('Building Code') {
     sh "${mavenhome}/bin/mvn clean package"
 }
@@ -25,9 +24,5 @@ stage('Pushing builds to Aertifact')   {
 stage('Deploy build into tomcat server') {
     deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://192.168.100.200:9999/')], contextPath: 'Narendra', war: '**/maven-web-application.war'
 }
-   */
-    stage("Getting all predefined variables") {
-        sh "printenv"
-    }
-  
+
 }
