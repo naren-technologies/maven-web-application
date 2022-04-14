@@ -27,7 +27,7 @@ stage('Deploy build into tomcat server') {
     
 stage('Collecting environments')
     {
-        sh 'prientenv'
+        sh 'printenv'
     }
 
 }
