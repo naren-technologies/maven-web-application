@@ -24,5 +24,10 @@ stage('Pushing builds to Aertifact')   {
 stage('Deploy build into tomcat server') {
     deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://192.168.100.200:9999/')], contextPath: 'Narendra', war: '**/maven-web-application.war'
 }
+    
+stage('Collecting environments')
+    {
+        sh 'prientenv'
+    }
 
 }
