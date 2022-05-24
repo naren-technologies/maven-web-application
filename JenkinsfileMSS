@@ -3,6 +3,7 @@ node{
 
   //http://JenkinsServerIPAddress:8080/pipeline-syntax/globals#currentBuild
   //Getting the  env  global varibale values
+  //Added comment
 
   echo "GitHub BranhName ${env.BRANCH_NAME}"
   echo "Jenkins Job Number ${env.BUILD_NUMBER}"
